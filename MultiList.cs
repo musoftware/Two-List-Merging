@@ -37,7 +37,25 @@ namespace AM_Speed_V2.Operations
             return list;
         }
 
+        public List<a12Obj> SeqA1(int countA2eachA1 = 1)
+        {
+            if (a1.Count == 0) return new List<a12Obj>();
+            if (a2.Count == 0) return new List<a12Obj>();
 
+            List<a12Obj> list = new List<a12Obj>();
+            int a2Index = 0;
+            foreach (var item in a1)
+            {
+                if (a2Index >= a2.Count) break;
+                for (int i = 0; i < countA2eachA1; i++)
+                {
+                    if (a2Index >= a2.Count) break;
+                    list.Add(new a12Obj() { a1 = item, a2 = a2[a2Index] });
+                    a2Index++;
+                }
+            }
+            return list;
+        }
 
 
 
