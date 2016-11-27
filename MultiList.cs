@@ -11,7 +11,6 @@ namespace AM_Speed_V2.Operations
 
         public List<string> a1 = new List<string>();
         public List<string> a2 = new List<string>();
-        public List<string> a3 = new List<string>();
 
         public List<a12Obj> CompleteA2(int countA2eachA1 = 1)
         {
